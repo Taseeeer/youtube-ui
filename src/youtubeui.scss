@@ -1,0 +1,94 @@
+$primary-color: #212121;
+
+body {
+    color: white;
+}
+
+header {
+    background-color: $primary-color;
+    height: 7vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-first {
+        display: flex;
+        align-items: center;
+        gap: 2rem;  
+        font-size: 1.3rem;
+        margin: 0 1rem;
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            .y-logo {
+                color: red;
+                font-size: 2rem;
+            }
+
+            .youtube-written {
+                font-weight: 700;
+            }
+
+            .pk-written {
+                font-size: 0.7rem;
+                color: gray;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+
+    .header-second {
+        display: flex;
+        .input-background {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            background-color: black;
+            input {
+                background-color: black;
+                border: none;
+                width: 400px;
+                padding: 0.7rem;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .header-search {
+            font-size: 1.3rem;
+            padding: 0.6rem;
+            background-color: #303030;
+        }
+
+        .header-mic {
+            background-color: black;
+            border-radius: 50%;
+            padding: 0.8rem;
+            margin-left: 0.6rem;
+        }
+    }
+
+
+    .header-third {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+
+        .user-image {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+    }
+}

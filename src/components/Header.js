@@ -26,7 +26,6 @@ export default function Header() {
                 <AiOutlineVideoCameraAdd />
                 <AiOutlineAppstore />
                 <AiOutlineBell />
-
                 <img className="user-image" src={taseer}  />
             </div>
         </header>

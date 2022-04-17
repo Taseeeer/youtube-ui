@@ -43,6 +43,7 @@ header {
 
     .header-second {
         display: flex;
+
         .input-background {
             font-size: 1.5rem;
             display: flex;
@@ -90,5 +91,52 @@ header {
             height: 30px;
             border-radius: 50%;
         }
+    }
+}
+
+
+
+.body {
+    display: flex;
+    height: 100vh;
+    
+    .sidebar { 
+        background-color: $primary-color;
+        flex-basis: 220px;
+        overflow-y: scroll;
+
+        .each-option {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start ;
+            gap: 1rem;
+            padding: 0.7rem;
+            // background-color: red;
+            font-size: 1.5rem;
+
+            span {
+                font-size: 0.9rem;
+            }
+
+            .sidebar-icon {
+                margin-left: 1rem;
+            }
+        }
+
+        .sidebar-sub {
+            color: gray;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-left: 1.7rem;
+            margin-top: 2rem;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+    }
+
+    .content {
+        flex: 1;
+        background-color: #181818;
     }
 }

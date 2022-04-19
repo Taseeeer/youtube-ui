@@ -2,13 +2,13 @@ import { AiFillYoutube, AiOutlineMenu, AiOutlineSearch, AiOutlineVideoCameraAdd,
 import { BsFillMicFill } from "react-icons/bs";
 import taseer from "../assets/cap.jpeg";
 
-export default function Header() {
+export default function Header({ theme, setTheme }) {
     return(
         <header>
             <div className="header-first">
                 <AiOutlineMenu />
                 <div className="logo">
-                    <AiFillYoutube className="y-logo" /> 
+                    <AiFillYoutube className="y-logo" onClick={() => setTheme(!theme)} /> 
                     <span className="youtube-written">Youtube</span>
                     <span className="pk-written">PK</span>
                 </div>

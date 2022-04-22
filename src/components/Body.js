@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiFillHome, AiOutlineCompass, AiOutlineLike, AiOutlineClockCircle, AiOutlineHistory, AiOutlinePlaySquare, AiFillPlaySquare } from "react-icons/ai";
 import { BsCollectionPlay, BsPlay, BsPlusCircle, BsTrophy, BsBroadcast } from "react-icons/bs";
 import { GiConsoleController } from "react-icons/gi";
@@ -98,12 +98,36 @@ export default function Body() {
             </div>
             </div>
         )
-    }; 
+    };
 
+    const renderSidebarIconsMobile = () => {
+        return(
+                <div className="sidebar-mobile">
+                    <div className="each-option">
+                        <AiFillHome className="sidebar-icon" />
+                        <span>Home</span>
+                    </div>        
+                    <div className="each-option">
+                        <AiOutlineCompass className="sidebar-icon" />
+                        <span>Explore</span>
+                    </div>        
+                    <div className="each-option">
+                        <BsPlay className="sidebar-icon" />
+                        <span>Shorts</span>
+                    </div>        
+                    <div className="each-option">
+                        <BsCollectionPlay className="sidebar-icon" />
+                        <span>Subscriptions</span>
+                    </div>        
+                </div>
+        )
+    }
+    
     return (
         <div className="body">
+            {renderSidebarIconsMobile()}
             <div className="sidebar">
-            {renderSidebarIcons()}
+                {renderSidebarIcons()}
             </div>
             <div className="content">
                 <div className="content-tags">

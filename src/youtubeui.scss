@@ -17,7 +17,7 @@ body {
     color: var(--color);
 }
 
-header {
+header { 
     background-color: var(--primary-color);
     min-height: 7vh;
 
@@ -31,7 +31,7 @@ header {
         align-items: center;
         gap: 2rem;  
         font-size: 1.3rem;
-        margin: 0 1rem;
+        margin: 0 1.5rem;
 
         .logo {
             display: flex;
@@ -113,6 +113,7 @@ header {
     display: flex;
     height: 93vh;
     
+
     .sidebar { 
         background-color: var(--sidebar-color);
         flex-basis: 220px;
@@ -123,7 +124,7 @@ header {
             align-items: center;
             justify-content: flex-start ;
             gap: 1rem;
-            padding: 0.7rem;
+            padding: 0.7rem 0.5rem;
             font-size: 1.5rem;
             cursor: pointer;
             color: var(--color);
@@ -150,7 +151,35 @@ header {
             display: inline-block;
             text-transform: uppercase;
         }
+        
+        @media screen and (max-width: 1200px) {
+            display: none;
+        }
+    }
 
+    .sidebar-mobile {
+        background-color: var(--primary-color);
+        flex-basis: 55px;
+        display: none;
+
+        .each-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0.5rem;
+
+            font-size: 1.4rem;
+
+            span {
+                padding: 0.5rem 0;
+                font-size: 0.5rem;
+            }
+        }
+
+
+        @media screen and (max-width: 1200px) {
+            display: block;
+        }
     }
 
     .content {

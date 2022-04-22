@@ -10,6 +10,7 @@ $secondary-color: whitesmoke;
     --searchblack: #303030;
     --sidebar-color: #212121;
     --header-color: #212121;
+    --tag-color: #383838;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    min-height: 9vh;
+    min-height: 7vh;
 
     display: flex;
     justify-content: space-between;
@@ -47,7 +48,9 @@ header {
             }
 
             .pk-written {
-                font-size: 0.7rem;
+                font-size: 0.6rem;
+                font-weight: 500;
+                color: rgb(153, 153, 153);
                 margin-bottom: 1rem;
             }
         }
@@ -153,15 +156,43 @@ header {
     .content {
         flex: 1;
         background-color: var(--content);
+        overflow: scroll;
 
-        .content-header {
+        .content-tags {
             min-height: 7vh;
+            display: flex;
+            align-items: center;
+            color: var(--color);
+            border-top: 1px solid #666666;
+            border-bottom: 0.5px solid #666666;
+
+            .content-tag {
+                display: inline-block; 
+                display: flex;
+                align-items: center;
+                background-color: var(--tag-color);
+                text-align: center;
+                border: 1px solid #666666;
+                border-radius: 50px;
+                margin: 0.3rem 0.4rem;
+                height: 24px;
+                font-weight: 500;
+                padding: 0.2rem 1rem;
+                cursor: pointer;
+
+            }
+
+            .active {
+                background-color: whitesmoke;
+                color: black;
+            }
         }
 
         .videos-container {
             display: flex;
             flex-wrap: wrap;
             margin: 0 auto;
+
             .video {
                 display: flex;
                 flex-direction: column;
@@ -171,9 +202,29 @@ header {
                 color: var(--color);
                 cursor: pointer;
 
+                .video-info {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .video-info-all {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 0.5rem;
+                    }
+
+                    .option-dots {
+                        margin-top: 0.5rem;
+                        visibility: hidden;
+                    }
+                }
+
                 &:hover {
                     transform: scale(1.1);
                     transition: 0.2s;
+                    
+                    .option-dots {
+                        visibility: visible;
+                    }
                 }
 
                 .video-image {
@@ -191,13 +242,14 @@ header {
                 }
 
                 &-title {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                 }
 
                 &-channel-name {
                     font-size: 0.7rem;
                     font-weight: 500;
                 }
+
             }
         }
     }
@@ -212,4 +264,5 @@ header {
     --searchblack: #e0e0e0;
     --sidebar-color: #e0e0e0;
     --header-color: #dbdbdb;
+    --tag-color: #dbdbdb;
 }

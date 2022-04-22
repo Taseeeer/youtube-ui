@@ -1,8 +1,10 @@
 import { AiFillHome, AiOutlineCompass, AiOutlineLike, AiOutlineClockCircle, AiOutlineHistory, AiOutlinePlaySquare } from "react-icons/ai";
 import { BsCollectionPlay, BsPlay, BsPlusCircle, BsTrophy, BsBroadcast } from "react-icons/bs";
 import { GiConsoleController } from "react-icons/gi";
+import { data } from "../data";
 
 export default function Body() {
+    console.log(data);
 
     const renderSidebarIcons = () => {
         return (
@@ -88,14 +90,30 @@ export default function Body() {
             </div>
             </div>
         )
-    }
+    };
 
     return (
         <div className="body">
             <div className="sidebar">
             {renderSidebarIcons()}
             </div>
-            <div className="content"></div>
+            <div className="content">
+                <div className="content-header">
+                </div>
+                <div className="videos-container">
+                    {data.map(({id, title, image, views, timeAgo, channelName}) => (
+                        <div className="video" key={id}>
+                            <img src={image} alt={title} className="video-image" />
+                            <span className="video-title">{title.substring(0,60) + "..."}</span>
+                            <span className="video-channel-name">{channelName}</span>
+                            <div className="views-time">
+                                <span>{views}</span>
+                                <span>{timeAgo}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }

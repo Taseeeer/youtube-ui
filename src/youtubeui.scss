@@ -48,7 +48,6 @@ header {
 
             .pk-written {
                 font-size: 0.7rem;
-                color: gray;
                 margin-bottom: 1rem;
             }
         }
@@ -154,6 +153,53 @@ header {
     .content {
         flex: 1;
         background-color: var(--content);
+
+        .content-header {
+            min-height: 7vh;
+        }
+
+        .videos-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            .video {
+                display: flex;
+                flex-direction: column;
+                margin: 5rem 1rem;
+                width: 270px;
+                height: 150px;
+                color: var(--color);
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: 0.2s;
+                }
+
+                .video-image {
+                    width: 270px;
+                    height: 150px;
+                }
+
+                .views-time {
+                    font-size: 0.6rem;
+                    margin: 0.5rem 0;
+
+                    span + span {
+                        padding: 0 1rem;
+                    }
+                }
+
+                &-title {
+                    font-size: 1.2rem;
+                }
+
+                &-channel-name {
+                    font-size: 0.7rem;
+                    font-weight: 500;
+                }
+            }
+        }
     }
 }
 
